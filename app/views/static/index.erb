@@ -1,2 +1,30 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+
+<p>Shorten your links with my own version of Bitly.</p>
+
+<form action = "/shorten" method = "post">
+	Enter URL:
+	<input type="text" name="long_url">
+	<input type="submit" value="Shorten">
+</form>
+
+<div class="container">
+
+<table>
+
+    <tr>
+        <th>Long URL</th>
+        <th id="short">Short URL</th>
+        <th id="click">Click count</th>
+    </tr>
+    <% Url.all.order(id: :desc).limit(10).each do |u| %>
+    <tr>
+        <td><%= u.long_url %></td>
+        <td><a href="/<%= u.short_url %>" target=blank><%= u.short_url %></a></td>  
+        <td><%= u.click %></td>
+
+
+    </tr>
+    <% end %>
+</table>
+</div>
+

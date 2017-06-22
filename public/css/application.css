@@ -1,0 +1,48 @@
+body {
+    background-image: url("http://cdn.wallpapersafari.com/94/31/wnHg73.jpg");
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+  text-align: center;
+  font-family: monospace;
+  font-size: 30px;
+  color: white;
+}
+
+form {
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  color: grey;
+        
+}
+
+table,tr,th,td {
+
+    border: 1px solid grey;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: lightgrey;
+    width: 80%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    font-family: purisa;
+    opacity: 10%
+}
+
+tr:hover td {background-color: white !important;}
+
+
+#click {
+  width: 10%;
+}
+
+#short {
+  width: 20%;
+}
