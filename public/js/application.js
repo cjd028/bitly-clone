@@ -21,8 +21,12 @@ $(document).ready(function() {
 
 $('tr:first-child').after('<tr><td>' + res.long_url + '</td><td><a href="' +res.short_url + '"target="_blank">' + res.short_url + '</a></td><td>0</td></tr>')
         }
-      },
-    })
+      })
+    }),
+  $('table tr td a').on('click', function(event) {
+    counter_ele = $(event.target).parent().next().next()
+    num = parseInt(counter_ele.text()) + 1
+    counter_ele.text(num)
   })
-});
-
+})
+  
